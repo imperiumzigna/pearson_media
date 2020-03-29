@@ -1,0 +1,19 @@
+{
+  "Unit Tests": {
+    "coverage": {
+      "/app/test/support/shoulda_matchers.rb": {
+        "lines": [
+          null,
+          null,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      }
+    },
+    "timestamp": 1585494796
+  }
+}
