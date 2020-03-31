@@ -1,0 +1,52 @@
+# == Schema Information
+#
+# Table name: stories
+#
+#  id          :bigint           not null, primary key
+#  body        :text(65535)
+#  deleted_at  :datetime
+#  headline    :string(255)
+#  status      :string(255)
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
+#  reviewer_id :bigint
+#  writer_id   :bigint
+#
+# Indexes
+#
+#  index_stories_on_deleted_at   (deleted_at)
+#  index_stories_on_reviewer_id  (reviewer_id)
+#  index_stories_on_writer_id    (writer_id)
+#
+# Foreign Keys
+#
+#  fk_rails_...  (reviewer_id => users.id)
+#  fk_rails_...  (writer_id => users.id)
+#
+breaking_new:
+  headline: SomeRandom
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.
+breaking_new_2:
+  headline: SomeRandom2
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.
+breaking_new_3:
+  headline: SomeRandom3
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.
+breaking_new_4:
+  headline: SomeRandom4
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.
+breaking_new_5:
+  headline: SomeRandom5
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.
+breaking_new_6:
+  headline: SomeRandom6
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.
+breaking_new_7:
+  headline: SomeRandom7
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.
+breaking_new_8:
+  headline: SomeRandom8
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.
+breaking_new_9:
+  headline: SomeRandom9
+  body: Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Casamentiss faiz malandris se pirulitá. Nec orci ornare consequat. Praesent lacinia ultrices consectetur. Sed non ipsum felis. A ordem dos tratores não altera o pão duris.

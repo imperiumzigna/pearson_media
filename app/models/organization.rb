@@ -11,9 +11,11 @@
 #  updated_at :datetime         not null
 #
 class Organization < ApplicationRecord
+  has_many :users
+
   validates :name, presence: true, uniqueness: true
 
-  before_create :generate_slug
+  before_save :generate_slug
 
   def generate_slug
     self.slug = self.name.parameterize

@@ -9,8 +9,6 @@
 #  updated_at :datetime         not null
 #
 
-one:
-  name: Organization one
-
-two:
-  name: Organization two
+pearson_news:
+  name: Pearson News
+  slug: pearson-news

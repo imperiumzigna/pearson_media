@@ -4,14 +4,14 @@
     <title>Pearson Media Center</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
     <%= stylesheet_pack_tag 'application' %>
+    <%= stylesheet_pack_tag 'auth' %>
     <%= javascript_pack_tag 'application' %>
-    <%= javascript_pack_tag 'stories' %>
     <%= stylesheet_pack_tag 'bootstrap' %>
   </head>
+
   <body>
-    <%= render 'partials/navbar'%>
-    <%= render 'partials/breadcrumb'%>
     <%= yield %>
   </body>
 </html>

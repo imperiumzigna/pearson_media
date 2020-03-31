@@ -11,6 +11,7 @@
 #  remember_created_at    :datetime
 #  reset_password_sent_at :datetime
 #  reset_password_token   :string(255)
+#  role                   :string(255)      default(NULL)
 #  created_at             :datetime         not null
 #  updated_at             :datetime         not null
 #  organization_id        :bigint
@@ -24,4 +25,6 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
+  should have_many(:written_stories)
+  should have_many(:reviewed_stories)
 end

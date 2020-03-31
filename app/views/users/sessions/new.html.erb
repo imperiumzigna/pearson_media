@@ -2,13 +2,17 @@
   <div class="row h-100 justify-content-center align-items-center text-center">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-group mt-1">
+    <%= f.label 'Organization', class: 'form-text' %>
+    <%= f.text_field :organization_slug, required: true, autofocus: true, class: 'form-control' %>
+  </div>
+  <div class="form-group mt-1">
     <%= f.label :email, class: 'form-text' %>
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", class: 'form-control' %>
+    <%= f.email_field :email, autofocus: true,required: true, autocomplete: "email", class: 'form-control' %>
   </div>
 
   <div class="form-group mt-1">
     <%= f.label :password, class: 'form-text' %>
-    <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
+    <%= f.password_field :password, autocomplete: "current-password",required: true, class: 'form-control' %>
   </div>
 
   <% if devise_mapping.rememberable? %>

@@ -14,6 +14,7 @@ require "test_helper"
 
 class OrganizationTest < ActiveSupport::TestCase
   should validate_presence_of(:name)
+  should have_many(:users)
 
   test "slug creation" do
     one = Organization.create(name: "Some Organization")

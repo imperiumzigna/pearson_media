@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+<div class='container'>
+  <div class="d-flex flex-column bd-highlight mb-3">
+    Stories
+    <div class="d-flex justify-content-between">
+      <span><a href="<%= stories_path %>">All</a> | <a href="<%= stories_path(user: current_user.id) %>">My Stories</a></span>
+      <div class="d-flex">
+        <%= render partial: 'partials/users_select', locals: { users: @users } %>
+        <%= render partial: 'partials/story_status_select' %>
+      </div>
+      <% if current_user.editor? %>
+        <%= link_to 'New Story', new_story_path, class: 'btn btn-flat btn-info' %>
+      <% end %>
+    </div>
+  </div>
+  <div class="d-flex flex-column bd-highlight mb-3">
+    <% @stories.each do |story| %>
+      <div class="p-2 card card-body mb-2">
+        <div class="d-flex justify-content-between">
+          <h5><a href="<%= edit_story_path(story.id) %>"><%= story.headline %></a></h5>
+          <%= render partial: 'partials/story_status_badge', locals: { story: story } %>
+        </div>
+        <div class="d-flex mb-3">
+          <span class="flex-fill"> Writer: </span>
+          <span class="flex-fill"> Reviewer: </span>
+        </div>
+        <div class="d-flex justify-content-center">
+          <a class="badge badge-success m-2" data-toggle="collapse" href="#collapse-<%= story.id %>" role="button" aria-expanded="false" aria-controls="collapse-<%= story.id %>">
+            View Story
+          </a>
+        </div>
+        <div class="collapse" id="collapse-<%= story.id %>">
+          <div class="card card-body ">
+            <p class="text-wrap"><%= story.body %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="d-flex justify-content-center">
+    <%= will_paginate @stories, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+  </div>
+</div>

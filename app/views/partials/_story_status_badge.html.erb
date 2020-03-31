@@ -1,0 +1,4 @@
+<div>
+  <span class="badge badge-<%= story.status %>"><%= story.status.humanize %></span>
+  <span><%= l story.created_at.in_time_zone('America/Fortaleza'), format: :minimun %></span>
+</div>

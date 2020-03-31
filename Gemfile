@@ -16,7 +16,11 @@ gem "turbolinks", "~> 5"
 gem "jbuilder", "~> 2.7"
 gem "aasm"
 gem "pundit"
+gem "loaf"
 gem "devise"
+gem "will_paginate", "~> 3.1.0"
+gem "will_paginate-bootstrap4"
+gem "paranoia", "~> 2.2"
 gem "bootsnap", ">= 1.4.2", require: false
 
 group :development, :test do

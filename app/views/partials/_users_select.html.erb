@@ -1,0 +1,8 @@
+<select class="custom-select" id="users-select">
+  <option value="nil" disabled selected>Select by writer or reviewer</option>
+  <% users.each do |user| %>
+    <option value="<%= stories_path(user: user.id) %>">
+      <%= user.name || user.email %>
+    </option>
+  <% end %>
+</select>

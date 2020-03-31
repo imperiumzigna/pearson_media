@@ -1,0 +1,8 @@
+<select class="custom-select ml-2" id="states-select">
+  <option value="nil" disabled selected>Status</option>
+  <% Story.aasm.states.each do |state| %>
+    <option value="<%= stories_path(status: state.name) %>">
+      <%= state.name.to_s.humanize %>
+    </option>
+  <% end %>
+</select>
